@@ -13,7 +13,8 @@ public class Ball_manager : MonoBehaviour
     private float timer = 0.0f;
     private float deTimer = 0.0f;
 
-
+    public int redPopped = 0;
+    public int bluePopped = 0;
 
     List<GameObject> reds = new List<GameObject>();
     List<GameObject> blues = new List<GameObject>();
@@ -85,4 +86,15 @@ public class Ball_manager : MonoBehaviour
         return ball.transform.position;
     }
 
+    public int increaseBluePopped()
+    {
+        bluePopped += 1;
+        return bluePopped;
+    }
+
+    public int increaseRedPopped()
+    {
+        redPopped += 1;
+        return redPopped;
+    }
 }
